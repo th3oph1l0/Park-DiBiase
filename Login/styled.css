@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+.s2{
+    background-color: #05184C;
+    height: 100vh;
+
+    .container2{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .leftcontent2{
+        display: flex;
+        flex-direction: column;
+        height: 544px;
+        width: 232px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    .rightconten2{
+        display: flex;
+        flex-direction: column;
+    }
+    .toprightcards2{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap:50px;
+    }
+    .card{
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        border-radius: 10px;
+        width: 240px;
+        height: 240px;
+        justify-content: space-between;
+        gap:50px;
+    }
+}

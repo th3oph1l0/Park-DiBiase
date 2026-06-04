@@ -6,47 +6,50 @@
 
     <title>Park Di Biase - Login</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Login/style.css">
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <section class="s1"> 
+        <div class="login-box">
 
-    <div class="login-box">
+            <div class="left-panel">
 
-        <div class="left-panel">
+                <img src="Imagem/logo.png.png" alt="Logo">
 
-            <img src="Imagem/logo.png.png" alt="Logo">
+                <h1>Login</h1>
+                <div class="line"></div>
+                <p>Acesse sua conta para continuar</p>
+            </div>
 
-            <h1>Login</h1>
-            <div class="line"></div>
-            <p>Acesse sua conta para continuar</p>
+
+            <div class="right-panel">
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label>USUÁRIO</label>
+                        <input id="usuario" type="text" placeholder="Digite seu usuário">
+                    </div>
+
+                    <div class="input-group">
+                        <label>SENHA</label>
+                        <input id="senha" type="password" placeholder="Digite sua senha">
+                    </div>
+
+                    <a href="#" class="forgot">
+                        Esqueceu sua senha?
+                    </a>
+
+                    <button type="submit">
+                        ENTRAR
+                    </button>
+                </form>
+            </div>
         </div>
+    </section>
 
-
-        <div class="right-panel">
-            <form>
-                <div class="input-group">
-                    <label>USUÁRIO</label>
-                    <input id="usuario" type="text" placeholder="Digite seu usuário">
-                </div>
-
-                <div class="input-group">
-                    <label>SENHA</label>
-                    <input id="senha" type="password" placeholder="Digite sua senha">
-                </div>
-
-                <a href="#" class="forgot">
-                    Esqueceu sua senha?
-                </a>
-
-                <button type="submit">
-                    ENTRAR
-                </button>
-            </form>
-        </div>
-    </div>
+    <script>document.getElementById("loginForm").addEventListener("submit", function(e){ e.preventDefault(); window.location.href = "/Dashboard/index.html"; });</script>
     <script src="/Login/script.js"></script>
 </body>
 </html>
