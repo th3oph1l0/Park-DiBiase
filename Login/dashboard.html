@@ -1,66 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link rel="stylesheet" href="styled.css">
+    <title>Park Di Biase - Dashboard</title>
+    <link rel="stylesheet" href="styled.css">
 </head>
 
 <body>
     <header>
-        <img src="Imagem/logo.png.png" alt="Logo">
-        <div><a>Usuário &nbsp; | &nbsp; Ponto</a></div>
-
+        <img src="Imagem/logo.png.png" alt="Logo Park Di Biase">
+        <div><a href="#">Usuário &nbsp; | &nbsp; Ponto</a></div>
     </header>
+
     <section class="s2">
-        
         <div class="container2">
-            <div class="leftcontent2">
-                <a href="">Início</a>
-                <a href="">Controle de veículos</a>
-                <a href="">Entrada e saída</a>
-                <a href="">Vagas</a>
-                <a href="">Relatórios</a>
-                <a href="">Configurações</a>
-            </div>
+            <nav class="leftcontent2">
+                <a class="active" href="dashboard.html">Início</a>
+                <a href="veiculos.html">Controle de veículos</a>
+                <a href="#">Entrada e saída</a>
+                <a href="#">Vagas</a>
+                <a href="#">Relatórios</a>
+                <a href="#">Configurações</a>
+            </nav>
 
-            <div class="rightcontent2">
+            <main class="rightcontent2">
+                <div class="page-heading">
+                    <div>
+                        <span>Painel administrativo</span>
+                        <h1>Dashboard principal</h1>
+                    </div>
+                    <p>Resumo rápido da movimentação atual do estacionamento.</p>
+                </div>
+
                 <div class="toprightcards2">
-                    <div class="toprightcards2">
-                        <div class="card">
-                            <span>Total</span>
-                            <h2 id="totalVeiculos">0</h2>
-                        </div>
-
-                        <div class="card">
-                            <span>Entradas</span>
-                            <h2 id="totalEntradas">0</h2>
-                        </div>
-
-                        <div class="card">
-                            <span>Saídas</span>
-                            <h2 id="totalSaidas">0</h2>
-                        </div>
-
-                        <div class="card">
-                            <span>Vagas</span>
-                            <h2 id="totalVagas">0</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="bottomright2">
-
-                    <h2>Últimos veículos registrados</h2>
-
-                    <div class="table-header">
-                        <span>Placa</span>
-                        <span>Entrada</span>
-                        <span>Vaga</span>
+                    <div class="card">
+                        <span>Total</span>
+                        <h2 id="totalVeiculos">48</h2>
+                        <small>veículos cadastrados</small>
                     </div>
 
+                    <div class="card">
+                        <span>Entradas</span>
+                        <h2 id="totalEntradas">31</h2>
+                        <small>registradas hoje</small>
+                    </div>
+
+                    <div class="card">
+                        <span>Saídas</span>
+                        <h2 id="totalSaidas">17</h2>
+                        <small>registradas hoje</small>
+                    </div>
+
+                    <div class="card">
+                        <span>Vagas</span>
+                        <h2 id="totalVagas">22</h2>
+                        <small>disponíveis agora</small>
+                    </div>
                 </div>
-            </div>
+
+                <div class="dashboard-grid">
+                    <div class="bottomright2">
+                        <h2>Últimos veículos registrados</h2>
+
+                        <div class="table-header">
+                            <span>Placa</span>
+                            <span>Entrada</span>
+                            <span>Vaga</span>
+                        </div>
+
+                        <div class="table-row">
+                            <span>ABC-1D23</span>
+                            <span>08:12</span>
+                            <span>A-04</span>
+                        </div>
+                        <div class="table-row">
+                            <span>FRT-8K91</span>
+                            <span>08:45</span>
+                            <span>B-12</span>
+                        </div>
+                        <div class="table-row">
+                            <span>PRK-5L07</span>
+                            <span>09:20</span>
+                            <span>C-02</span>
+                        </div>
+                    </div>
+
+                    <aside class="panel summary-panel">
+                        <h2>Situação atual</h2>
+                        <div class="summary-item">
+                            <span>Ocupação</span>
+                            <strong>68%</strong>
+                        </div>
+                        <div class="progress-bar">
+                            <span style="width: 68%"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Movimentações hoje</span>
+                            <strong>48</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Última atualização</span>
+                            <strong>09:20</strong>
+                        </div>
+                        <a class="secondary-link" href="veiculos.html">Ver controle de veículos</a>
+                    </aside>
+                </div>
+            </main>
         </div>
     </section>
 </body>
