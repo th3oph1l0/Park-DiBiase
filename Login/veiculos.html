@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Di Biase - Controle de Veículos</title>
+    <link rel="stylesheet" href="styled.css">
+</head>
+
+<body>
+    <header>
+        <img src="Imagem/logo.png.png" alt="Logo Park Di Biase">
+        <div><a href="#">Usuário &nbsp; | &nbsp; Ponto</a></div>
+    </header>
+
+    <section class="s2">
+        <div class="container2">
+            <nav class="leftcontent2">
+                <a href="dashboard.html">Início</a>
+                <a class="active" href="veiculos.html">Controle de veículos</a>
+                <a href="#">Entrada e saída</a>
+                <a href="#">Vagas</a>
+                <a href="#">Relatórios</a>
+                <a href="#">Configurações</a>
+            </nav>
+
+            <main class="rightcontent2">
+                <div class="page-heading">
+                    <div>
+                        <span>Gestão do estacionamento</span>
+                        <h1>Controle de veículos</h1>
+                    </div>
+                    <p>Lista geral de veículos, placas, proprietários e status atual.</p>
+                </div>
+
+                <div class="toprightcards2">
+                    <div class="card">
+                        <span>No pátio</span>
+                        <h2>31</h2>
+                        <small>estacionados agora</small>
+                    </div>
+                    <div class="card">
+                        <span>Fora do pátio</span>
+                        <h2>17</h2>
+                        <small>já registraram saída</small>
+                    </div>
+                    <div class="card">
+                        <span>Cadastrados</span>
+                        <h2>48</h2>
+                        <small>base de veículos</small>
+                    </div>
+                    <div class="card">
+                        <span>Alertas</span>
+                        <h2>3</h2>
+                        <small>dados para revisar</small>
+                    </div>
+                </div>
+
+                <div class="vehicle-layout">
+                    <section class="panel vehicles-panel">
+                        <div class="panel-title">
+                            <h2>Veículos registrados</h2>
+                            <button class="primary-button" type="button">Novo veículo</button>
+                        </div>
+
+                        <div class="toolbar">
+                            <div class="field">
+                                <label for="busca">Buscar por placa</label>
+                                <input id="busca" type="search" placeholder="Ex: ABC-1D23">
+                            </div>
+
+                            <div class="field">
+                                <label for="tipo">Tipo</label>
+                                <select id="tipo">
+                                    <option>Todos</option>
+                                    <option>Carro</option>
+                                    <option>Moto</option>
+                                    <option>Utilitário</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="status">Status</label>
+                                <select id="status">
+                                    <option>Todos</option>
+                                    <option>Estacionado</option>
+                                    <option>Fora do pátio</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="table-wrap">
+                            <table class="vehicle-table">
+                                <thead>
+                                    <tr>
+                                        <th>Placa</th>
+                                        <th>Modelo</th>
+                                        <th>Dono</th>
+                                        <th>Tipo</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ABC-1D23</td>
+                                        <td>Honda Civic</td>
+                                        <td>Marcos Lima</td>
+                                        <td>Carro</td>
+                                        <td><span class="badge parked">Estacionado</span></td>
+                                        <td class="actions">
+                                            <button type="button">Detalhes</button>
+                                            <button type="button">Editar</button>
+                                            <button type="button">Excluir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>FRT-8K91</td>
+                                        <td>Fiat Toro</td>
+                                        <td>Ana Souza</td>
+                                        <td>Utilitário</td>
+                                        <td><span class="badge parked">Estacionado</span></td>
+                                        <td class="actions">
+                                            <button type="button">Detalhes</button>
+                                            <button type="button">Editar</button>
+                                            <button type="button">Excluir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PRK-5L07</td>
+                                        <td>Yamaha Fazer</td>
+                                        <td>João Pereira</td>
+                                        <td>Moto</td>
+                                        <td><span class="badge outside">Fora do pátio</span></td>
+                                        <td class="actions">
+                                            <button type="button">Detalhes</button>
+                                            <button type="button">Editar</button>
+                                            <button type="button">Excluir</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>DBS-2A44</td>
+                                        <td>Volkswagen Gol</td>
+                                        <td>Carla Santos</td>
+                                        <td>Carro</td>
+                                        <td><span class="badge outside">Fora do pátio</span></td>
+                                        <td class="actions">
+                                            <button type="button">Detalhes</button>
+                                            <button type="button">Editar</button>
+                                            <button type="button">Excluir</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <aside class="panel form-card">
+                        <h2>Cadastro rápido</h2>
+
+                        <form class="vehicle-form">
+                            <div class="field">
+                                <label for="placa">Placa</label>
+                                <input id="placa" type="text" placeholder="ABC-1D23">
+                            </div>
+
+                            <div class="field">
+                                <label for="modelo">Modelo</label>
+                                <input id="modelo" type="text" placeholder="Modelo do veículo">
+                            </div>
+
+                            <div class="field">
+                                <label for="proprietario">Dono</label>
+                                <input id="proprietario" type="text" placeholder="Nome completo">
+                            </div>
+
+                            <div class="field">
+                                <label for="vaga">Vaga atual</label>
+                                <input id="vaga" type="text" placeholder="A-01">
+                            </div>
+
+                            <button class="primary-button" type="button">Cadastrar veículo</button>
+                        </form>
+                    </aside>
+                </div>
+            </main>
+        </div>
+    </section>
+</body>
+</html>
