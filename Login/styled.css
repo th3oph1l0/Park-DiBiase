@@ -5,42 +5,138 @@
     font-family:'Segoe UI',sans-serif;
 }
 
+body{
+    background:#05184C;
+}
+
+/* HEADER */
+
+header{
+    height:80px;
+    background:#05184C;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 25px;
+
+    border-bottom:1px solid rgba(255,255,255,.7);
+}
+
+header img{
+    width:75px;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+/* ÁREA PRINCIPAL */
+
 .s2{
-    background-color: #05184C;
-    height: 100vh;
+    background:#05184C;
+    min-height:calc(100vh - 80px);
 
-    .container2{
-        display: flex;
-        flex-direction: row;
-    }
+    padding:18px;
+}
 
-    .leftcontent2{
-        display: flex;
-        flex-direction: column;
-        height: 544px;
-        width: 232px;
-        background-color: #fff;
-        border-radius: 10px;
-    }
-    .rightconten2{
-        display: flex;
-        flex-direction: column;
-    }
-    .toprightcards2{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap:50px;
-    }
-    .card{
-        display: flex;
-        flex-direction: row;
-        background-color: #fff;
-        border-radius: 10px;
-        width: 240px;
-        height: 240px;
-        justify-content: space-between;
-        gap:50px;
-    }
+.container2{
+    display:flex;
+    gap:22px;
+}
+
+/* MENU */
+
+.leftcontent2{
+    width:230px;
+    height:540px;
+
+    background:white;
+    border-radius:10px;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:35px 22px;
+}
+
+.leftcontent2 a{
+    text-decoration:none;
+    color:black;
+    margin-bottom:28px;
+    font-size:18px;
+}
+
+/* LADO DIREITO */
+
+.rightcontent2{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* CARDS */
+
+
+.toprightcards2{
+    display:flex;
+    gap: 50px;
+}
+
+.card{
+    width:230px;
+    height:230px;
+
+    background:white;
+    border-radius:10px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.card span{
+    color:#666;
+    font-size:16px;
+}
+
+.card h2{
+    color:#05184C;
+    font-size:36px;
+    margin-top:10px;
+}
+
+/* BLOCO INFERIOR */
+
+.bottomright2{
+    margin-top:30px;
+    background:white;
+    border-radius:10px;
+    padding:25px;
+    min-height:260px;
+}
+
+.bottomright2 h2{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.table-header{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+
+    padding:12px;
+
+    background:#f1f4f8;
+
+    border-radius:8px;
+
+    font-weight:600;
 }
