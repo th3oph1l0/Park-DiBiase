@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Di Biase - Vagas</title>
+    <link rel="stylesheet" href="styled.css">
+</head>
+
+<body>
+    <header>
+        <img src="Imagem/logo.png.png" alt="Logo Park Di Biase">
+        <div><a href="#">Usuário &nbsp; | &nbsp; Ponto</a></div>
+    </header>
+
+    <section class="s2">
+        <div class="container2">
+            <nav class="leftcontent2">
+                <a href="dashboard.html">Início</a>
+                <a href="veiculos.html">Controle de veículos</a>
+                <a href="entrada-saida.html">Entrada e saída</a>
+                <a class="active" href="vagas.html">Vagas</a>
+                <a href="#">Relatórios</a>
+                <a href="#">Configurações</a>
+            </nav>
+
+            <main class="rightcontent2">
+                <div class="page-heading">
+                    <div>
+                        <span>Mapa do estacionamento</span>
+                        <h1>Controle de vagas</h1>
+                    </div>
+                    <p>Visualização da ocupação por setor e situação atual das vagas.</p>
+                </div>
+
+                <div class="toprightcards2">
+                    <div class="card">
+                        <span>Total</span>
+                        <h2>70</h2>
+                        <small>vagas cadastradas</small>
+                    </div>
+                    <div class="card">
+                        <span>Disponíveis</span>
+                        <h2>22</h2>
+                        <small>liberadas agora</small>
+                    </div>
+                    <div class="card">
+                        <span>Ocupadas</span>
+                        <h2>48</h2>
+                        <small>com veículo</small>
+                    </div>
+                    <div class="card">
+                        <span>Reservadas</span>
+                        <h2>6</h2>
+                        <small>uso especial</small>
+                    </div>
+                </div>
+
+                <div class="parking-layout">
+                    <section class="panel">
+                        <div class="panel-title">
+                            <h2>Setores e vagas</h2>
+                            <button class="primary-button" type="button">Atualizar vagas</button>
+                        </div>
+
+                        <div class="sector-tabs">
+                            <button class="active" type="button">Setor A</button>
+                            <button type="button">Setor B</button>
+                            <button type="button">Setor C</button>
+                        </div>
+
+                        <div class="parking-grid">
+                            <div class="parking-spot free">
+                                <strong>A-01</strong>
+                                <span>Livre</span>
+                            </div>
+                            <div class="parking-spot busy">
+                                <strong>A-02</strong>
+                                <span>ABC-1D23</span>
+                            </div>
+                            <div class="parking-spot busy">
+                                <strong>A-03</strong>
+                                <span>DBS-2A44</span>
+                            </div>
+                            <div class="parking-spot busy">
+                                <strong>A-04</strong>
+                                <span>FRT-8K91</span>
+                            </div>
+                            <div class="parking-spot free">
+                                <strong>A-05</strong>
+                                <span>Livre</span>
+                            </div>
+                            <div class="parking-spot reserved">
+                                <strong>A-06</strong>
+                                <span>Reservada</span>
+                            </div>
+                            <div class="parking-spot free">
+                                <strong>A-07</strong>
+                                <span>Livre</span>
+                            </div>
+                            <div class="parking-spot busy">
+                                <strong>A-08</strong>
+                                <span>HJK-7P12</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <aside class="panel summary-panel">
+                        <h2>Legenda</h2>
+                        <div class="legend-item">
+                            <span class="legend-color free"></span>
+                            <p>Vaga disponível</p>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color busy"></span>
+                            <p>Vaga ocupada</p>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color reserved"></span>
+                            <p>Vaga reservada</p>
+                        </div>
+
+                        <div class="summary-item">
+                            <span>Setor com mais vagas</span>
+                            <strong>Setor A</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Última atualização</span>
+                            <strong>09:20</strong>
+                        </div>
+                    </aside>
+                </div>
+            </main>
+        </div>
+    </section>
+</body>
+</html>

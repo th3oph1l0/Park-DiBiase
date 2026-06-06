@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Di Biase - Entrada e Saída</title>
+    <link rel="stylesheet" href="styled.css">
+</head>
+
+<body>
+    <header>
+        <img src="Imagem/logo.png.png" alt="Logo Park Di Biase">
+        <div><a href="#">Usuário &nbsp; | &nbsp; Ponto</a></div>
+    </header>
+
+    <section class="s2">
+        <div class="container2">
+            <nav class="leftcontent2">
+                <a href="dashboard.html">Início</a>
+                <a href="veiculos.html">Controle de veículos</a>
+                <a class="active" href="entrada-saida.html">Entrada e saída</a>
+                <a href="vagas.html">Vagas</a>
+                <a href="#">Relatórios</a>
+                <a href="#">Configurações</a>
+            </nav>
+
+            <main class="rightcontent2">
+                <div class="page-heading">
+                    <div>
+                        <span>Movimentações</span>
+                        <h1>Entrada e saída</h1>
+                    </div>
+                    <p>Acompanhamento das movimentações registradas durante o dia.</p>
+                </div>
+
+                <div class="toprightcards2">
+                    <div class="card">
+                        <span>Entradas</span>
+                        <h2>31</h2>
+                        <small>registradas hoje</small>
+                    </div>
+                    <div class="card">
+                        <span>Saídas</span>
+                        <h2>17</h2>
+                        <small>registradas hoje</small>
+                    </div>
+                    <div class="card">
+                        <span>No pátio</span>
+                        <h2>31</h2>
+                        <small>veículos estacionados</small>
+                    </div>
+                    <div class="card">
+                        <span>Último registro</span>
+                        <h2>09:20</h2>
+                        <small>PRK-5L07</small>
+                    </div>
+                </div>
+
+                <div class="movement-layout">
+                    <section class="panel">
+                        <div class="panel-title">
+                            <h2>Histórico de movimentações</h2>
+                            <button class="primary-button" type="button">Atualizar</button>
+                        </div>
+
+                        <div class="toolbar">
+                            <div class="field">
+                                <label for="placa">Placa</label>
+                                <input id="placa" type="search" placeholder="Buscar placa">
+                            </div>
+
+                            <div class="field">
+                                <label for="movimento">Tipo</label>
+                                <select id="movimento">
+                                    <option>Todos</option>
+                                    <option>Entrada</option>
+                                    <option>Saída</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="periodo">Período</label>
+                                <select id="periodo">
+                                    <option>Hoje</option>
+                                    <option>Manhã</option>
+                                    <option>Tarde</option>
+                                    <option>Noite</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="movement-list">
+                            <article class="movement-item">
+                                <div class="camera-box">IMG</div>
+                                <div>
+                                    <span class="badge parked">Entrada</span>
+                                    <h3>ABC-1D23</h3>
+                                    <p>Honda Civic entrou às 08:12 na vaga A-04.</p>
+                                </div>
+                                <div class="movement-time">
+                                    <strong>08:12</strong>
+                                    <span>permanência: 1h 08min</span>
+                                </div>
+                            </article>
+
+                            <article class="movement-item">
+                                <div class="camera-box">IMG</div>
+                                <div>
+                                    <span class="badge outside">Saída</span>
+                                    <h3>PRK-5L07</h3>
+                                    <p>Yamaha Fazer saiu após registro na cancela principal.</p>
+                                </div>
+                                <div class="movement-time">
+                                    <strong>09:20</strong>
+                                    <span>permanência: 42min</span>
+                                </div>
+                            </article>
+
+                            <article class="movement-item">
+                                <div class="camera-box">IMG</div>
+                                <div>
+                                    <span class="badge parked">Entrada</span>
+                                    <h3>FRT-8K91</h3>
+                                    <p>Fiat Toro entrou às 08:45 na vaga B-12.</p>
+                                </div>
+                                <div class="movement-time">
+                                    <strong>08:45</strong>
+                                    <span>permanência: 35min</span>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <aside class="panel summary-panel">
+                        <h2>Resumo do fluxo</h2>
+                        <div class="summary-item">
+                            <span>Entrada mais recente</span>
+                            <strong>FRT-8K91</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Saída mais recente</span>
+                            <strong>PRK-5L07</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Tempo médio</span>
+                            <strong>1h 15min</strong>
+                        </div>
+                        <a class="secondary-link" href="dashboard.html">Voltar ao dashboard</a>
+                    </aside>
+                </div>
+            </main>
+        </div>
+    </section>
+</body>
+</html>
