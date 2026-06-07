@@ -1,0 +1,118 @@
+.parking-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 22px;
+}
+
+.parking-layout .panel {
+    margin-top: 30px;
+}
+
+.sector-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.sector-tabs button {
+    border: 1px solid #cbd6e2;
+    background: white;
+    color: #24457c;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.sector-tabs button.active {
+    background: #edf3f8;
+    border-color: #7eb8ff;
+}
+
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    gap: 14px;
+}
+
+.parking-spot {
+    min-height: 95px;
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #d9e2ec;
+}
+
+.parking-spot strong {
+    color: #05184c;
+    font-size: 20px;
+}
+
+.parking-spot span {
+    font-size: 14px;
+    color: #475569;
+}
+
+.parking-spot.free {
+    background: #e4f4ea;
+}
+
+.parking-spot.busy {
+    background: #f4e8e8;
+}
+
+.parking-spot.reserved {
+    background: #fff4d8;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 0;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+}
+
+.legend-color.free {
+    background: #8fd2a8;
+}
+
+.legend-color.busy {
+    background: #d98e8e;
+}
+
+.legend-color.reserved {
+    background: #e8c45c;
+}
+
+@media (max-width: 1080px) {
+    .parking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .parking-grid {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .sector-tabs {
+        overflow-x: auto;
+    }
+
+    .sector-tabs button {
+        flex: 0 0 auto;
+    }
+
+    .parking-grid {
+        grid-template-columns: 1fr;
+    }
+}

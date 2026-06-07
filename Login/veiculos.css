@@ -1,0 +1,51 @@
+.vehicle-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.vehicle-layout.simple {
+    align-items: flex-start;
+}
+
+.vehicle-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vehicle-table th {
+    padding: 12px;
+    border-bottom: 1px solid #edf1f5;
+    text-align: left;
+    white-space: nowrap;
+    background: #edf3f8;
+    color: #24457c;
+    font-size: 14px;
+}
+
+.vehicle-table td {
+    padding: 12px;
+    border-bottom: 1px solid #edf1f5;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.vehicle-table tbody tr:hover {
+    background: #f8fbff;
+}
+
+.form-card {
+    margin-top: 0;
+}
+
+.vehicle-form {
+    display: grid;
+    gap: 16px;
+}
+
+@media (max-width: 1080px) {
+    .vehicle-layout {
+        grid-template-columns: 1fr;
+    }
+}
