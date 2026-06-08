@@ -10,10 +10,14 @@
         repeat(auto-fit,minmax(180px,1fr));
 }
 
+.panel h2{
+    margin-bottom:25px;
+}
+
 .relatorio-buttons{
     display:flex;
     gap:12px;
-    margin-top:20px;
+    margin-top:12px;
     flex-wrap:wrap;
 }
 
@@ -29,4 +33,60 @@
 
 .secondary-button:hover{
     border-color:#123d92;
+}
+
+.relatorio-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.relatorio-table thead{
+    background:#edf3f8;
+}
+
+.relatorio-table th{
+    padding:16px;
+    text-align:left;
+    color:#24457c;
+    font-weight:600;
+}
+
+.relatorio-table td{
+    padding:16px;
+    border-top:1px solid #edf1f5;
+}
+
+.relatorio-table tr:hover{
+    background:#fafcff;
+}
+
+.relatorio-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:20px 0;
+    color:#64748b;
+    font-size:14px;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.relatorio-table tr{
+    transition:0.2s;
+}
+
+.relatorio-table tr:hover{
+    background:#f5f9ff;
+}
+
+.table-footer{
+    margin-top:15px;
+    text-align:right;
+    color:#64748b;
+    font-size:14px;
+    font-weight:500;
+}
+
+.panel + .panel{
+    margin-top:22px;
 }
