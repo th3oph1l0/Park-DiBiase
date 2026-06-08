@@ -3,27 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Park Di Biase - Relatórios</title>
+    <link rel="stylesheet" href="styled.css">
+    <link rel="stylesheet" href="relatorios.css">
 </head>
 <body>
+    <header>
+        <img src="Imagem/logo.png.png" alt="Logo Park Di Biase">
+        <div><a href="#">Usuário &nbsp; | &nbsp; Ponto</a></div>
+    </header>
     <section class="s2">
         <div class="container2">
             <nav class="leftcontent2">
                 <a href="dashboard.html">Início</a>
                 <a href="veiculos.html">Controle de veículos</a>
                 <a href="entrada-saida.html">Entrada e saída</a>
-                <a class="active" href="vagas.html">Vagas</a>
-                <a href="relatiorios.html">Relatórios</a>
+                <a href="vagas.html">Vagas</a>
+                <a class="active" href="relatorios.html">Relatórios</a>
                 <a href="#">Configurações</a>
             </nav>
 
             <main class="rightcontent2">
                 <div class="page-heading">
                     <div>
-                        <span>Mapa do estacionamento</span>
-                        <h1>Controle de vagas</h1>
+                        <span>Painel Administrativo</span>
+                        <h1>Relatórios Operacionais</h1>
                     </div>
-                    <p>Visualização da ocupação por setor e situação atual das vagas.</p>
+                    <p>Informações detalhadas sobre as movimentações do estacionamento.</p>
+                </div>
+                <div class="panel">
+                    <h2>Filtros de pesquisa</h2>
+
+                    <div class="toolbar relatorio-toolbar">
+
+                        <div class="field">
+                            <label>Data inicial</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="field">
+                            <label>Data final</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="field">
+                            <label>Status</label>
+                            <select>
+                                <option>Todos</option>
+                                <option>Estacionado</option>
+                                <option>Finalizado</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label>Horário</label>
+                            <select>
+                                <option>Todos</option>
+                                <option>Manhã</option>
+                                <option>Tarde</option>
+                                <option>Noite</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label>Placa</label>
+                            <input type="text" placeholder="ABC1D23">
+                        </div>
+
+                    </div>
+
+                    <div class="relatorio-buttons">
+                        <button class="primary-button">Filtrar</button>
+                        <button class="secondary-button">Limpar</button>
+                        <button class="secondary-button">Exportar CSV</button>
+                    </div>
+
                 </div>
 </body>
 </html>
