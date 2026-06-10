@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Di Biase - Gestão de Usuários</title>
+    <link rel="stylesheet" href="styled.css">
+    <link rel="stylesheet" href="relatorios.css"> <link rel="stylesheet" href="usuarios.css">
+</head>
+<body>
+    <header>
+        <img src="Imagem/logo.png.png" alt="Logo Park Di Biase">
+        <div><a href="#">Usuário &nbsp; | &nbsp; Ponto</a></div>
+    </header>
+
+    <section class="s2">
+        <div class="container2">
+            <nav class="leftcontent2">
+                <a href="dashboard.html">Início</a>
+                <a href="veiculos.html">Controle de veículos</a>
+                <a href="entrada-saida.html">Entrada e saída</a>
+                <a href="vagas.html">Vagas</a>
+                <a href="relatorios.html">Relatórios</a>
+                <a class="active" href="usuarios.html">Gestão de Usuários</a>
+                <a href="#">Configurações</a>
+            </nav>
+
+            <main class="rightcontent2">
+                <div class="page-heading">
+                    <div>
+                        <span>Painel Administrativo</span>
+                        <h1>Gestão de Colaboradores</h1>
+                    </div>
+                    <p>Controle de acesso ao sistema e ao APP operacional.</p>
+                </div>
+
+                <div class="panel">
+                    <h2 id="formTitle">Registrar Novo Colaborador</h2>
+                    
+                    <form id="formUsuario">
+                        <input type="hidden" id="editId" value="">
+                        
+                        <div class="toolbar relatorio-toolbar">
+                            <div class="field">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" placeholder="Digite o nome" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="matricula">Matrícula (Obrigatório)</label>
+                                <input type="text" id="matricula" placeholder="Ex: UGB-001" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="acesso">Nível de Acesso</label>
+                                <select id="acesso" required>
+                                    <option value="Painel Administrativo">Painel Administrativo</option>
+                                    <option value="APP Operacional">APP Operacional</option>
+                                    <option value="Acesso Total">Acesso Total</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="senha">Senha de Acesso</label>
+                                <input type="password" id="senha" placeholder="Crie uma senha" required>
+                            </div>
+                        </div>
+
+                        <div class="relatorio-buttons">
+                            <button type="submit" class="primary-button" id="btnSalvar">Salvar Colaborador</button>
+                            <button type="button" class="secondary-button" id="btnCancelar" style="display: none;">Cancelar Edição</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="panel">
+                    <h2>Colaboradores Registrados</h2>
+                    
+                    <div class="table-wrap">
+                        <table class="relatorio-table">
+                            <thead>
+                                <tr>
+                                    <th>Matrícula</th>
+                                    <th>Nome</th>
+                                    <th>Acesso</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabelaUsuarios">
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="usuarios.js"></script>
+</body>
+</html>

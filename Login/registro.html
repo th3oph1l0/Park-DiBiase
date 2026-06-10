@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Di Biase - Registro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Ajustes exclusivos para a tela de Registro caber perfeitamente */
+        .s1 .login-box {
+            height: auto !important; 
+            min-height: 520px;       
+        }
+        .s1 .right-panel {
+            padding: 35px 70px !important; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .s1 .input-group {
+            margin-bottom: 15px !important; 
+        }
+        .s1 .forgot {
+            margin-bottom: 20px !important; 
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="s1"> 
+        <div class="login-box">
+
+            <div class="left-panel">
+                <img src="Imagem/logo.png.png" alt="Logo">
+                <h1>Registro</h1>
+                <div class="line"></div>
+                <p>Crie sua conta para acessar o sistema</p>
+            </div>
+
+            <div class="right-panel">
+                <form id="registroForm">
+                    <div class="input-group">
+                        <label>NOME COMPLETO</label>
+                        <input id="reg-nome" type="text" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>MATRÍCULA</label>
+                        <input id="reg-matricula" type="text" placeholder="Ex: UGB-001" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>SENHA</label>
+                        <input id="reg-senha" type="password" placeholder="Crie uma senha" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>CONFIRMAR SENHA</label>
+                        <input id="reg-confirma-senha" type="password" placeholder="Repita a senha" required>
+                    </div>
+
+                    <a href="index.html" class="forgot">
+                        Já tem uma conta? Faça login
+                    </a>
+
+                    <button type="submit">
+                        CADASTRAR
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("registroForm").addEventListener("submit", function(e){ 
+            e.preventDefault(); 
+            
+            const senha = document.getElementById("reg-senha").value;
+            const confirmaSenha = document.getElementById("reg-confirma-senha").value;
+
+            if(senha !== confirmaSenha) {
+                alert("As senhas não coincidem!");
+                return;
+            }
+
+            alert("Cadastro realizado com sucesso! Faça login para continuar.");
+            window.location.href = "index.html"; 
+        });
+    </script>
+</body>
+</html>
