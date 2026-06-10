@@ -14,6 +14,11 @@
     margin-bottom:25px;
 }
 
+.panel h2 i{
+    color:#24457c;
+    margin-right:8px;
+}
+
 .relatorio-buttons{
     display:flex;
     gap:12px;
@@ -35,6 +40,10 @@
     border-color:#123d92;
 }
 
+.secondary-button i{
+    margin-right:6px;
+}
+
 .relatorio-table{
     width:100%;
     border-collapse:collapse;
@@ -49,6 +58,10 @@
     text-align:left;
     color:#24457c;
     font-weight:600;
+}
+
+.relatorio-table th i{
+    margin-right:6px;
 }
 
 .relatorio-table td{
@@ -69,6 +82,11 @@
     font-size:14px;
     flex-wrap:wrap;
     gap:10px;
+}
+
+.relatorio-info i{
+    color:#24457c;
+    margin-right:6px;
 }
 
 .relatorio-table tr{

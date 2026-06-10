@@ -88,6 +88,7 @@ botoesSetor.forEach(function(botao){
         botao.classList.add("active");
         setorAtual = botao.textContent;
         renderizarVagas();
+        mostrarToast(setorAtual + " selecionado.", "info");
     });
 });
 
@@ -100,6 +101,9 @@ botaoAtualizarVagas.addEventListener("click", function(){
         primeiraLivre.status = "busy";
         primeiraLivre.texto = "NOVO-01";
         renderizarVagas();
+        mostrarToast("Vaga " + primeiraLivre.vaga + " marcada como ocupada.", "success");
+    }else{
+        mostrarAlerta("Sem vagas livres", "Não há vagas livres neste setor.", "info");
     }
 });
 

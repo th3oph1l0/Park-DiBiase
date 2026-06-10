@@ -90,10 +90,17 @@ botaoAtualizar.addEventListener("click", function(){
 
     movimentacoes.unshift(novaMovimentacao);
     renderizarMovimentacoes();
+    mostrarToast("Movimentação adicionada à lista.", "success");
 });
 
 filtroPlaca.addEventListener("input", renderizarMovimentacoes);
-filtroTipo.addEventListener("change", renderizarMovimentacoes);
-filtroPeriodo.addEventListener("change", renderizarMovimentacoes);
+filtroTipo.addEventListener("change", function(){
+    renderizarMovimentacoes();
+    mostrarToast("Filtro de tipo aplicado.", "info");
+});
+filtroPeriodo.addEventListener("change", function(){
+    renderizarMovimentacoes();
+    mostrarToast("Período atualizado.", "info");
+});
 
 renderizarMovimentacoes();

@@ -31,8 +31,8 @@ function renderizarTabela() {
             <td><span class="badge ${colaborador.acesso === 'APP Operacional' ? 'outside' : 'parked'}">${colaborador.acesso}</span></td>
             <td>
                 <div class="action-buttons">
-                    <button class="btn-edit" onclick="editarColaborador(${colaborador.id})">Editar</button>
-                    <button class="btn-delete" onclick="deletarColaborador(${colaborador.id})">Excluir</button>
+                    <button class="btn-edit" onclick="editarColaborador(${colaborador.id})"><i class="fa-solid fa-pen"></i> Editar</button>
+                    <button class="btn-delete" onclick="deletarColaborador(${colaborador.id})"><i class="fa-solid fa-trash"></i> Excluir</button>
                 </div>
             </td>
         `;
@@ -52,7 +52,7 @@ formUsuario.addEventListener('submit', function(e) {
 
     // Validação básica (a matrícula já está com 'required' no HTML, mas garantimos aqui)
     if (!matricula) {
-        alert("O número de matrícula é obrigatório!");
+        mostrarAlerta("Campo obrigatório", "O número de matrícula é obrigatório!", "warning");
         return;
     }
 
@@ -61,7 +61,7 @@ formUsuario.addEventListener('submit', function(e) {
         const index = colaboradores.findIndex(c => c.id == editId);
         if (index !== -1) {
             colaboradores[index] = { id: Number(editId), nome, matricula, acesso, senha };
-            alert('Colaborador atualizado com sucesso!');
+            mostrarToast('Colaborador atualizado com sucesso!', 'success');
         }
         resetarFormulario();
     } else {
@@ -69,13 +69,13 @@ formUsuario.addEventListener('submit', function(e) {
         // Checagem extra: evitar matrícula duplicada
         const matriculaExiste = colaboradores.some(c => c.matricula === matricula);
         if (matriculaExiste) {
-            alert('Já existe um colaborador registrado com essa matrícula.');
+            mostrarAlerta('Matrícula duplicada', 'Já existe um colaborador registrado com essa matrícula.', 'warning');
             return;
         }
 
         idAtual++;
         colaboradores.push({ id: idAtual, nome, matricula, acesso, senha });
-        alert('Colaborador registrado com sucesso!');
+        mostrarToast('Colaborador registrado com sucesso!', 'success');
         formUsuario.reset();
     }
 
@@ -102,12 +102,13 @@ window.editarColaborador = function(id) {
 }
 
 // DELETE: Função chamada pelo botão "Excluir"
-window.deletarColaborador = function(id) {
-    const confirmar = confirm("Tem certeza que deseja remover este colaborador? O acesso dele será revogado.");
+window.deletarColaborador = async function(id) {
+    const confirmar = await confirmarAcao("Remover colaborador", "Tem certeza que deseja remover este colaborador? O acesso dele será revogado.", "Remover");
     
     if (confirmar) {
         colaboradores = colaboradores.filter(c => c.id !== id);
         renderizarTabela();
+        mostrarToast('Colaborador removido.', 'success');
     }
 }
 

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Park Di Biase - Relatórios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styled.css">
     <link rel="stylesheet" href="relatorios.css">
 </head>
@@ -15,13 +17,13 @@
     <section class="s2">
         <div class="container2">
             <nav class="leftcontent2">
-                <a href="dashboard.html">Início</a>
-                <a href="veiculos.html">Controle de veículos</a>
-                <a href="entrada-saida.html">Entrada e saída</a>
-                <a href="vagas.html">Vagas</a>
-                <a class="active" href="relatorios.html">Relatórios</a>
-                <a href="usuarios.html">Gestão de Usuários</a>
-                <a href="#">Configurações</a>
+                <a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Início</a>
+                <a href="veiculos.html"><i class="fa-solid fa-car"></i> Controle de veículos</a>
+                <a href="entrada-saida.html"><i class="fa-solid fa-right-left"></i> Entrada e saída</a>
+                <a href="vagas.html"><i class="fa-solid fa-square-parking"></i> Vagas</a>
+                <a class="active" href="relatorios.html"><i class="fa-solid fa-file-lines"></i> Relatórios</a>
+                <a href="usuarios.html"><i class="fa-solid fa-users"></i> Gestão de Usuários</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> Configurações</a>
             </nav>
 
             <main class="rightcontent2">
@@ -33,22 +35,22 @@
                     <p>Informações detalhadas sobre as movimentações do estacionamento.</p>
                 </div>
                 <div class="panel">
-                    <h2>Filtros de pesquisa</h2>
+                    <h2><i class="bi bi-funnel"></i> Filtros de pesquisa</h2>
 
                     <div class="toolbar relatorio-toolbar">
 
                         <div class="field">
-                            <label>Data inicial</label>
+                            <label><i class="bi bi-calendar-event"></i> Data inicial</label>
                             <input type="date">
                         </div>
 
                         <div class="field">
-                            <label>Data final</label>
+                            <label><i class="bi bi-calendar-check"></i> Data final</label>
                             <input type="date">
                         </div>
 
                         <div class="field">
-                            <label>Status</label>
+                            <label><i class="bi bi-check2-circle"></i> Status</label>
                             <select>
                                 <option>Todos</option>
                                 <option>Estacionado</option>
@@ -57,7 +59,7 @@
                         </div>
 
                         <div class="field">
-                            <label>Horário</label>
+                            <label><i class="bi bi-clock"></i> Horário</label>
                             <select>
                                 <option>Todos</option>
                                 <option>Manhã</option>
@@ -67,27 +69,27 @@
                         </div>
 
                         <div class="field">
-                            <label>Placa</label>
+                            <label><i class="bi bi-car-front"></i> Placa</label>
                             <input type="text" placeholder="ABC1D23">
                         </div>
 
                     </div>
 
                     <div class="relatorio-buttons">
-                        <button class="primary-button">Filtrar</button>
-                        <button class="secondary-button">Limpar</button>
-                        <button class="primary-button">Exportar CSV</button>
+                        <button class="primary-button"><i class="fa-solid fa-filter"></i> Filtrar</button>
+                        <button class="secondary-button"><i class="fa-solid fa-eraser"></i> Limpar</button>
+                        <button class="primary-button"><i class="fa-solid fa-file-export"></i> Exportar CSV</button>
                     </div>
 
                 </div>
 
                 <div class="relatorio-info">
-                    <span>48 registros encontrados</span>
-                    <span>Última atualização: 07/06/2026 às 14:32</span>
+                    <span><i class="bi bi-list-check"></i> 48 registros encontrados</span>
+                    <span><i class="bi bi-arrow-repeat"></i> Última atualização: 07/06/2026 às 14:32</span>
                 </div>
 
                 <div class="panel">
-                    <h2>Relatório de movimentações</h2>
+                    <h2><i class="bi bi-table"></i> Relatório de movimentações</h2>
 
                     <div class="table-wrap">
 
@@ -95,11 +97,11 @@
 
                             <thead>
                                 <tr>
-                                    <th>Placa</th>
-                                    <th>Data/Hora Entrada</th>
-                                    <th>Data/Hora Saída</th>
-                                    <th>Status</th>
-                                    <th>Vaga</th>
+                                    <th><i class="bi bi-car-front"></i> Placa</th>
+                                    <th><i class="bi bi-box-arrow-in-right"></i> Data/Hora Entrada</th>
+                                    <th><i class="bi bi-box-arrow-right"></i> Data/Hora Saída</th>
+                                    <th><i class="bi bi-check-circle"></i> Status</th>
+                                    <th><i class="bi bi-p-square"></i> Vaga</th>
                                 </tr>
                             </thead>
 
@@ -149,5 +151,8 @@
                         </div>
                     </div>
                 </div>
+            </main>
+        </div>
+    </section>
 </body>
 </html>

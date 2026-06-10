@@ -50,9 +50,9 @@ function renderizarVeiculos(){
             <td>${veiculo.tipo}</td>
             <td>${badgeStatus(veiculo.status)}</td>
             <td class="actions">
-                <button type="button" data-action="detalhes" data-placa="${veiculo.placa}">Detalhes</button>
-                <button type="button" data-action="editar" data-placa="${veiculo.placa}">Editar</button>
-                <button type="button" data-action="excluir" data-placa="${veiculo.placa}">Excluir</button>
+                <button type="button" data-action="detalhes" data-placa="${veiculo.placa}"><i class="fa-solid fa-circle-info"></i> Detalhes</button>
+                <button type="button" data-action="editar" data-placa="${veiculo.placa}"><i class="fa-solid fa-pen"></i> Editar</button>
+                <button type="button" data-action="excluir" data-placa="${veiculo.placa}"><i class="fa-solid fa-trash"></i> Excluir</button>
             </td>
         `;
         tabelaVeiculos.appendChild(linha);
@@ -98,7 +98,7 @@ formVeiculo.addEventListener("submit", function(e){
     };
 
     if(!novoVeiculo.placa || !novoVeiculo.modelo || !novoVeiculo.dono){
-        alert("Preencha placa, modelo e dono.");
+        mostrarAlerta("Campos obrigatórios", "Preencha placa, modelo e dono.", "warning");
         return;
     }
 
@@ -117,9 +117,10 @@ formVeiculo.addEventListener("submit", function(e){
     salvarVeiculos();
     limparFormulario();
     renderizarVeiculos();
+    mostrarToast("Veículo salvo com sucesso.", "success");
 });
 
-tabelaVeiculos.addEventListener("click", function(e){
+tabelaVeiculos.addEventListener("click", async function(e){
     const botao = e.target.closest("button");
 
     if(!botao){
@@ -133,7 +134,7 @@ tabelaVeiculos.addEventListener("click", function(e){
     });
 
     if(acao === "detalhes"){
-        alert(`${veiculo.placa} - ${veiculo.modelo}\nDono: ${veiculo.dono}\nStatus: ${veiculo.status}`);
+        mostrarAlerta(veiculo.placa + " - " + veiculo.modelo, "Dono: " + veiculo.dono + " | Status: " + veiculo.status, "info");
     }
 
     if(acao === "editar"){
@@ -143,10 +144,11 @@ tabelaVeiculos.addEventListener("click", function(e){
         document.querySelector("#vaga").value = veiculo.status === "Estacionado" ? "A-01" : "";
         veiculoEditando = veiculo.placa;
         formVeiculo.querySelector("button").textContent = "Salvar alterações";
+        mostrarToast("Veículo carregado para edição.", "info");
     }
 
     if(acao === "excluir"){
-        const confirmar = confirm("Deseja excluir este veículo?");
+        const confirmar = await confirmarAcao("Excluir veículo", "Deseja excluir este veículo?", "Excluir");
 
         if(confirmar){
             veiculos = veiculos.filter(function(item){
@@ -155,6 +157,7 @@ tabelaVeiculos.addEventListener("click", function(e){
 
             salvarVeiculos();
             renderizarVeiculos();
+            mostrarToast("Veículo excluído.", "success");
         }
     }
 });

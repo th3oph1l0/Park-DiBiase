@@ -64,6 +64,15 @@ header a {
     font-size: 18px;
     border-radius: 8px;
     padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.leftcontent2 i {
+    width: 18px;
+    color: #24457c;
+    text-align: center;
 }
 
 .leftcontent2 a:hover {
@@ -142,6 +151,11 @@ header a {
     color: #666;
     font-size: 16px;
     text-align: center;
+}
+
+.card span i {
+    color: #24457c;
+    margin-right: 6px;
 }
 
 .card h2 {
@@ -264,6 +278,10 @@ header a {
     font-size: 13px;
 }
 
+.actions button i {
+    margin-right: 4px;
+}
+
 .actions button:hover {
     border-color: #123d92;
 }
@@ -276,6 +294,14 @@ header a {
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
+}
+
+.primary-button i {
+    margin-right: 6px;
+}
+
+.secondary-link i {
+    margin-right: 6px;
 }
 
 .table-wrap {

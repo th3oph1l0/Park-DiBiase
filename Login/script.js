@@ -13,7 +13,7 @@ document.querySelector("form").addEventListener("submit", function(e){
 
     }else{
 
-        alert("Usuário ou senha inválidos");
+        mostrarAlerta("Acesso negado", "Usuário ou senha inválidos", "error");
 
     }
 

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Park Di Biase - Controle de Veículos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styled.css">
     <link rel="stylesheet" href="veiculos.css">
 </head>
@@ -17,13 +19,13 @@
     <section class="s2">
         <div class="container2">
             <nav class="leftcontent2">
-                <a href="dashboard.html">Início</a>
-                <a class="active" href="veiculos.html">Controle de veículos</a>
-                <a href="entrada-saida.html">Entrada e saída</a>
-                <a href="vagas.html">Vagas</a>
-                <a href="relatorios.html">Relatórios</a>
-                <a href="usuarios.html">Gestão de Usuários</a>
-                <a href="#">Configurações</a>
+                <a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Início</a>
+                <a class="active" href="veiculos.html"><i class="fa-solid fa-car"></i> Controle de veículos</a>
+                <a href="entrada-saida.html"><i class="fa-solid fa-right-left"></i> Entrada e saída</a>
+                <a href="vagas.html"><i class="fa-solid fa-square-parking"></i> Vagas</a>
+                <a href="relatorios.html"><i class="fa-solid fa-file-lines"></i> Relatórios</a>
+                <a href="usuarios.html"><i class="fa-solid fa-users"></i> Gestão de Usuários</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> Configurações</a>
             </nav>
 
             <main class="rightcontent2">
@@ -37,22 +39,22 @@
 
                 <div class="toprightcards2">
                     <div class="card">
-                        <span>No pátio</span>
+                        <span><i class="bi bi-p-circle"></i> No pátio</span>
                         <h2>31</h2>
                         <small>estacionados agora</small>
                     </div>
                     <div class="card">
-                        <span>Fora do pátio</span>
+                        <span><i class="bi bi-box-arrow-right"></i> Fora do pátio</span>
                         <h2>17</h2>
                         <small>já registraram saída</small>
                     </div>
                     <div class="card">
-                        <span>Cadastrados</span>
+                        <span><i class="bi bi-card-checklist"></i> Cadastrados</span>
                         <h2>48</h2>
                         <small>base de veículos</small>
                     </div>
                     <div class="card">
-                        <span>Alertas</span>
+                        <span><i class="bi bi-exclamation-triangle"></i> Alertas</span>
                         <h2>3</h2>
                         <small>dados para revisar</small>
                     </div>
@@ -62,7 +64,7 @@
                     <section class="panel vehicles-panel">
                         <div class="panel-title">
                             <h2>Veículos registrados</h2>
-                            <button class="primary-button" type="button">Novo veículo</button>
+                            <button class="primary-button" type="button"><i class="fa-solid fa-plus"></i> Novo veículo</button>
                         </div>
 
                         <div class="toolbar">
@@ -188,6 +190,8 @@
             </main>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="feedback.js"></script>
     <script src="veiculos.js"></script>
 </body>
 </html>
