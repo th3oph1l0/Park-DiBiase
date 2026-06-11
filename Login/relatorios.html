@@ -40,17 +40,17 @@
 
                         <div class="field">
                             <label><i class="bi bi-calendar-event"></i> Data inicial</label>
-                            <input type="date">
+                            <input type="date" id="dataFinal">
                         </div>
 
                         <div class="field">
                             <label><i class="bi bi-calendar-check"></i> Data final</label>
-                            <input type="date">
+                            <input type="date"  id="dataInicial">
                         </div>
 
                         <div class="field">
                             <label><i class="bi bi-check2-circle"></i> Status</label>
-                            <select>
+                            <select id="statusFiltro">
                                 <option>Todos</option>
                                 <option>Estacionado</option>
                                 <option>Finalizado</option>
@@ -59,7 +59,7 @@
 
                         <div class="field">
                             <label><i class="bi bi-clock"></i> Horário</label>
-                            <select>
+                            <select id="horarioFiltro">
                                 <option>Todos</option>
                                 <option>Manhã</option>
                                 <option>Tarde</option>
@@ -69,21 +69,21 @@
 
                         <div class="field">
                             <label><i class="bi bi-car-front"></i> Placa</label>
-                            <input type="text" placeholder="ABC1D23">
+                            <input type="text" id="placaFiltro" placeholder="ABC1D23">
                         </div>
 
                     </div>
 
                     <div class="relatorio-buttons">
-                        <button class="primary-button"><i class="fa-solid fa-filter"></i> Filtrar</button>
-                        <button class="secondary-button"><i class="fa-solid fa-eraser"></i> Limpar</button>
-                        <button class="primary-button"><i class="fa-solid fa-file-export"></i> Exportar CSV</button>
+                        <button class="primary-button" id="btnFiltrar"><i class="fa-solid fa-filter"></i> Filtrar</button>
+                        <button class="secondary-button" id="btnLimpar"><i class="fa-solid fa-eraser"></i> Limpar</button>
+                        <button class="primary-button" id="btnExportar"><i class="fa-solid fa-file-export"></i> Exportar CSV</button>
                     </div>
 
                 </div>
 
                 <div class="relatorio-info">
-                    <span><i class="bi bi-list-check"></i> 48 registros encontrados</span>
+                    <span id="totalRegistros"><i class="bi bi-list-check"></i> 3 registros encontrados</span>
                     <span><i class="bi bi-arrow-repeat"></i> Última atualização: 07/06/2026 às 14:32</span>
                 </div>
 
@@ -104,7 +104,7 @@
                                 </tr>
                             </thead>
 
-                            <tbody>
+                            <tbody id="tabelaRelatorios">
 
                                 <tr>
                                     <td>ABC1D23</td>
@@ -145,7 +145,7 @@
                             </tbody>
 
                         </table>
-                        <div class="table-footer">
+                        <div class="table-footer" id="tableFooter">
                             Exibindo 3 de 48 registros
                         </div>
                     </div>
@@ -153,5 +153,138 @@
             </main>
         </div>
     </section>
+    <script>
+        const btnFiltrar = document.getElementById("btnFiltrar");
+        const btnLimpar = document.getElementById("btnLimpar");
+
+        const btnExportar = document.getElementById("btnExportar");
+
+        const placaFiltro = document.getElementById("placaFiltro");
+        const statusFiltro = document.getElementById("statusFiltro");
+        const horarioFiltro = document.getElementById("horarioFiltro");
+
+        const totalRegistros = document.getElementById("totalRegistros");
+        const tableFooter = document.getElementById("tableFooter");
+
+        btnFiltrar.addEventListener("click", () => {
+
+            const placa = placaFiltro.value.toUpperCase().trim();
+            const status = statusFiltro.value;
+            const linhas = document.querySelectorAll("#tabelaRelatorios tr");
+
+            let encontrados = 0;
+
+            linhas.forEach(linha => {
+
+            const placaTabela =
+                linha.cells[0].textContent.toUpperCase();
+
+            const statusTabela =
+                linha.cells[3].textContent.trim();
+
+            let exibir = true;
+
+            if (placa &&
+                !placaTabela.includes(placa)) {
+                exibir = false;
+                }
+
+            if (status !== "Todos" &&
+                !statusTabela.includes(status)) {
+                exibir = false;
+            }
+
+            linha.style.display =
+                exibir ? "" : "none";
+                    if (exibir) encontrados++;
+
+            });
+
+            totalRegistros.innerHTML =
+                `<i class="bi bi-list-check"></i> ${encontrados} registros encontrados`;
+
+            tableFooter.textContent =
+                `Exibindo ${encontrados} registros`;
+
+        });
+
+        btnLimpar.addEventListener("click", () => {
+
+            placaFiltro.value = "";
+            statusFiltro.value = "Todos";
+            horarioFiltro.value = "Todos";
+
+            const linhas =
+                document.querySelectorAll("#tabelaRelatorios tr");
+            
+            
+            linhas.forEach(linha => {
+                linha.style.display = "";
+            });
+
+            const total = linhas.length;
+
+            totalRegistros.innerHTML =
+                `<i class="bi bi-list-check"></i> ${total} registros encontrados`;
+
+            tableFooter.textContent =
+            `Exibindo ${total} registros`;
+
+        });
+
+        btnExportar.addEventListener("click", () => {
+
+        let csv = [];
+
+        const linhasVisiveis =
+            document.querySelectorAll(
+                '#tabelaRelatorios tr:not([style*="display: none"])'
+            );`Exibindo ${total} registros`;
+
+    });
+
+    btnExportar.addEventListener("click", () => {
+
+        let csv = [];
+
+        const linhasVisiveis =
+            document.querySelectorAll(
+                '#tabelaRelatorios tr:not([style*="display: none"])'
+            );
+        csv.push("Placa,Entrada,Saida,Status,Vaga");
+
+        linhasVisiveis.forEach(linha => {
+
+            const colunas = linha.querySelectorAll("td");
+
+            const dados = [
+                colunas[0].innerText,
+                colunas[1].innerText,
+                colunas[2].innerText,
+                colunas[3].innerText.trim(),
+                colunas[4].innerText
+            ];
+            csv.push(dados.join(","));
+
+        });
+
+        const blob =
+            new Blob([csv.join("\n")],
+            { type: "text/csv" });
+
+        const link =
+            document.createElement("a");
+
+        link.href =
+            URL.createObjectURL(blob);
+
+        link.download =
+            "relatorio_estacionamento.csv";
+
+        link.click();
+
+    });
+
+    </script>
 </body>
 </html>
