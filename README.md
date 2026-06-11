@@ -19,7 +19,7 @@ O projeto foi idealizado para resolver problemas comuns de mobilidade urbana e g
 ## 🛠️ Tecnologias Utilizadas
 
 
-* **Frontend:** HTML. Css e Js.
+* **Frontend:** HTML, Css e Js.
 
 
 ---
