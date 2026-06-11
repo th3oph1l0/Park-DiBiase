@@ -92,8 +92,8 @@ window.editarColaborador = function(id) {
         inputSenha.value = colaborador.senha;
         inputEditId.value = colaborador.id;
 
-        formTitle.textContent = "Editar Colaborador";
-        btnSalvar.textContent = "Atualizar Cadastro";
+        formTitle.innerHTML = '<i class="bi bi-pencil-square"></i> Editar Colaborador';
+        btnSalvar.innerHTML = '<i class="fa-solid fa-rotate"></i> Atualizar Cadastro';
         btnCancelar.style.display = "inline-block";
         
         // Dá scroll para o topo suavemente para focar no formulário
@@ -118,8 +118,8 @@ btnCancelar.addEventListener('click', resetarFormulario);
 function resetarFormulario() {
     formUsuario.reset();
     inputEditId.value = "";
-    formTitle.textContent = "Registrar Novo Colaborador";
-    btnSalvar.textContent = "Salvar Colaborador";
+    formTitle.innerHTML = '<i class="bi bi-person-plus"></i> Registrar Novo Colaborador';
+    btnSalvar.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Salvar Colaborador';
     btnCancelar.style.display = "none";
 }
 
