@@ -7,21 +7,19 @@ O **Parque-DiBiase** é um sistema de gerenciamento de estacionamento inteligent
 
 ## 🚀 Sobre o Projeto
 
-O projeto foi idealizado para resolver problemas comuns de mobilidade urbana e gestão de pátios, como a perda de tempo procurando vagas e o controle manual ineficiente. O sistema monitora a ocupação em tempo real e automatiza os processos de entrada, saída e tarifação (se aplicável).
+O projeto foi idealizado para resolver problemas comuns de mobilidade urbana e gestão de pátios, como a perda de tempo procurando vagas e o controle manual ineficiente. O sistema monitora a ocupação em tempo real e automatiza os processos de entrada, saída e controle de ocupação.
 
 ### 🛠️ Principais Funcionalidades (Planejadas / Implementadas)
 * **Controle de Vagas em Tempo Real:** Visualização do status de ocupação (Disponível/Ocupado).
 * **Registro de Entrada e Saída:** Automação do fluxo de veículos com registro de horários.
 * **Painel de Gestão (Dashboard):** Relatórios e métricas sobre o uso do estacionamento.
-* *Trabalhando com Hardware? (Opcional):* Integração com sensores para detecção física de presença de veículos.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Backend / Lógica:** [Ex:]
-* **Banco de Dados:** [Ex:]
-* **Frontend:** [Ex:]
-* *Hardware (Se houver):* [Ex:]
+
+* **Frontend:** HTML. Css e Js.
+
 
 ---
